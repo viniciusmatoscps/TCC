@@ -1,0 +1,17 @@
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+    event.preventDefault(); // Impede recarregar a página
+
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    if (usuario === "admin" && senha === "1234") {
+        document.getElementById("mensagem").innerText = "Login correto!";
+        window.location.href = "home.html";
+    } else {
+        document.getElementById("mensagem").innerText = "Usuário ou senha errados!";
+    }
+
+});
+</script>
